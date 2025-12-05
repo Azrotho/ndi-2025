@@ -1,0 +1,95 @@
+[gd_scene load_steps=12 format=3 uid="uid://dbhd5oanyjqjr"]
+
+[ext_resource type="Texture2D" uid="uid://7lvwkl3kovl3" path="res://assets/sprites/anim tour cassée.png" id="1_bs0m3"]
+[ext_resource type="Texture2D" uid="uid://cq1sem5nsh2ui" path="res://assets/sprites/Tour1 fonc.png" id="2_yhmsg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dx6bb"]
+atlas = ExtResource("1_bs0m3")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpchm"]
+atlas = ExtResource("1_bs0m3")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icwis"]
+atlas = ExtResource("1_bs0m3")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycllh"]
+atlas = ExtResource("1_bs0m3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xkmv"]
+atlas = ExtResource("1_bs0m3")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f64nh"]
+atlas = ExtResource("1_bs0m3")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tp2r"]
+atlas = ExtResource("1_bs0m3")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olt5r"]
+atlas = ExtResource("1_bs0m3")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cbiac"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dx6bb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xpchm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_icwis")
+}],
+"loop": true,
+"name": &"casse",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycllh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5xkmv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f64nh")
+}],
+"loop": false,
+"name": &"debutcassage",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yhmsg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_icwis")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1tp2r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olt5r")
+}],
+"loop": false,
+"name": &"repare",
+"speed": 5.0
+}]
+
+[node name="ComputerScene" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_cbiac")

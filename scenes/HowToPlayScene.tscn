@@ -1,0 +1,96 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbws7dtnqdbba"]
+
+[ext_resource type="Script" uid="uid://bo1l2101pwvax" path="res://scripts/credits.gd" id="1_xkonx"]
+[ext_resource type="FontFile" uid="uid://t0vfloe6cpwg" path="res://assets/font/batFont.ttf" id="2_4xavj"]
+[ext_resource type="Texture2D" uid="uid://du5dtqmuw1asq" path="res://assets/sprites/commentjouer.png" id="2_xkonx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4xavj"]
+font = ExtResource("2_4xavj")
+
+[node name="CreditScene" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_xkonx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_right = 1164.0
+offset_bottom = 656.0
+color = Color(0.60784316, 0.6784314, 0.7176471, 1)
+
+[node name="Commentjouer" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(575, 325)
+scale = Vector2(2.523, 2.523)
+texture = ExtResource("2_xkonx")
+
+[node name="Label->" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 334.0
+offset_top = 196.0
+offset_right = 386.0
+offset_bottom = 212.0
+text = "D/Right"
+label_settings = SubResource("LabelSettings_4xavj")
+
+[node name="Label<-" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 336.0
+offset_top = 274.0
+offset_right = 378.0
+offset_bottom = 290.0
+text = "Q/Left"
+label_settings = SubResource("LabelSettings_4xavj")
+
+[node name="LabelEnter" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 339.0
+offset_top = 356.0
+offset_right = 377.0
+offset_bottom = 372.0
+text = "Enter"
+label_settings = SubResource("LabelSettings_4xavj")
+
+[node name="LabelMusique" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 602.0
+offset_top = 195.0
+offset_right = 637.0
+offset_bottom = 211.0
+text = "Up"
+label_settings = SubResource("LabelSettings_4xavj")
+
+[node name="LabelSnake" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 603.0
+offset_top = 275.0
+offset_right = 638.0
+offset_bottom = 291.0
+text = "Down"
+label_settings = SubResource("LabelSettings_4xavj")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 555.0
+offset_right = 208.0
+offset_bottom = 633.0
+text = "Retour"
+
+[node name="Button2" type="Button" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 637.0
+offset_top = 339.0
+offset_right = 830.0
+offset_bottom = 417.0
+text = "Suite"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

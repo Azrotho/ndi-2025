@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8rvqp86ajosd"]
+
+[ext_resource type="Script" uid="uid://bo1l2101pwvax" path="res://scripts/credits.gd" id="1_cmgeg"]
+[ext_resource type="Texture2D" uid="uid://cuygkhox4jotm" path="res://assets/sprites/commentjouerfond.png" id="2_cmgeg"]
+[ext_resource type="FontFile" uid="uid://t0vfloe6cpwg" path="res://assets/font/batFont.ttf" id="2_e7mvt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_e7mvt"]
+font = ExtResource("2_e7mvt")
+
+[node name="CreditScene" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_cmgeg")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_right = 1164.0
+offset_bottom = 656.0
+color = Color(0.60784316, 0.6784314, 0.7176471, 1)
+
+[node name="Commentjouerfond" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(575, 325)
+scale = Vector2(2.523, 2.523)
+texture = ExtResource("2_cmgeg")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 555.0
+offset_right = 208.0
+offset_bottom = 633.0
+text = "Retour"
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 284.0
+offset_top = 77.0
+offset_right = 864.0
+offset_bottom = 378.0
+text = "Votre objectif : survivre le plus longtemps possbile aux pannes d'ordinateur et
+ammasser un maximum de points.
+
+Pour cela, vous devrez repérer les pannes lorsqu'elles surviennent, et les réparer 
+en appuyant sur la touche Entrer.
+
+Plus il y a d'anomalie, plus la musique est distordue, elle est votre seule amie ici-bas.
+Soyez attentifs à ses variations pour savoir lorsqu'une panne se déclare.
+Vous pouvez aussi la surveiller avec le visualisateur, que vous pouvez ouvrir avec
+la flèche du haut, et fermer avec Entrer.
+
+Vous pouvez aussi prendre le risque d'ouvrir le mini-jeu associé à la flèche du bas,
+pour récupérer énormément de points, au risque de laisser passer des pannes.
+
+Bonne chance !
+"
+label_settings = SubResource("LabelSettings_e7mvt")
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://cue7h25s5q1k5"]
+
+[ext_resource type="Script" uid="uid://bo1l2101pwvax" path="res://scripts/credits.gd" id="1_htkr8"]
+[ext_resource type="Texture2D" uid="uid://cuygkhox4jotm" path="res://assets/sprites/commentjouerfond.png" id="2_t7s81"]
+
+[node name="CreditScene" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_htkr8")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_right = 1164.0
+offset_bottom = 656.0
+color = Color(0.6745098, 0.19607843, 0.19607843, 1)
+
+[node name="Commentjouerfond" type="Sprite2D" parent="."]
+position = Vector2(591, 323)
+scale = Vector2(2.523, 2.523)
+texture = ExtResource("2_t7s81")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 555.0
+offset_right = 208.0
+offset_bottom = 633.0
+text = "Retour"
+
+[node name="Button4" type="Button" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 637.0
+offset_top = 339.0
+offset_right = 830.0
+offset_bottom = 417.0
+text = "Suite"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

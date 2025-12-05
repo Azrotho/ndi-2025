@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://music_visualizer_scene"]
+
+[ext_resource type="Script" path="res://scripts/music_visualizer.gd" id="1_viz"]
+
+[node name="MusicVisualizer" type="Node2D"]
+script = ExtResource("1_viz")

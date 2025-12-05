@@ -1,0 +1,102 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1t7r5xemy844"]
+
+[ext_resource type="FontFile" uid="uid://t0vfloe6cpwg" path="res://assets/font/batFont.ttf" id="1_font"]
+[ext_resource type="Texture2D" uid="uid://dyumkutj43dbm" path="res://assets/sprites/robocarp.png" id="2_robot"]
+[ext_resource type="Script" uid="uid://cnvf80wgejqbx" path="res://scripts/robot_chatbot.gd" id="3_script"]
+
+[node name="ChatbotScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_script")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -135.0
+offset_top = -90.0
+offset_right = 127.0
+offset_bottom = 91.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05, 0.05, 0.1, 1)
+
+[node name="Title" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 502.0
+offset_top = 130.0
+offset_right = 702.0
+offset_bottom = 160.0
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_font")
+theme_override_font_sizes/font_size = 24
+text = "ROBO-CONSEIL"
+horizontal_alignment = 1
+
+[node name="RobotSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(597, 226)
+scale = Vector2(3, 3)
+texture = ExtResource("2_robot")
+hframes = 5
+
+[node name="SpeechBubble" type="ColorRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 432.0
+offset_top = 300.0
+offset_right = 772.0
+offset_bottom = 400.0
+color = Color(1, 1, 1, 0.95)
+
+[node name="Label" type="Label" parent="SpeechBubble"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 330.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_font")
+theme_override_font_sizes/font_size = 14
+text = "Salut ! Je suis RoboCarp, ton assistant inutile."
+autowrap_mode = 2
+
+[node name="InputField" type="LineEdit" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 432.0
+offset_top = 415.0
+offset_right = 712.0
+offset_bottom = 445.0
+theme_override_fonts/font = ExtResource("1_font")
+theme_override_font_sizes/font_size = 14
+placeholder_text = "Écris quelque chose..."
+
+[node name="SendButton" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 722.0
+offset_top = 415.0
+offset_right = 772.0
+offset_bottom = 445.0
+theme_override_fonts/font = ExtResource("1_font")
+theme_override_font_sizes/font_size = 14
+text = "OK"
+
+[node name="BackButton" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 552.0
+offset_top = 460.0
+offset_right = 652.0
+offset_bottom = 490.0
+theme_override_fonts/font = ExtResource("1_font")
+theme_override_font_sizes/font_size = 12
+text = "Retour au menu"

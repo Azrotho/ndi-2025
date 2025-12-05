@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://do4gb8l7aof2s"]
+
+[ext_resource type="Script" uid="uid://qu5qln0dl36v" path="res://scripts/poste_scene.gd" id="1_yo8s1"]
+[ext_resource type="Texture2D" uid="uid://d4l2jg8mcq7v1" path="res://assets/sprites/bureau empilable.png" id="2_7dncm"]
+[ext_resource type="PackedScene" uid="uid://dbhd5oanyjqjr" path="res://scenes/ComputerScene.tscn" id="3_0mxku"]
+[ext_resource type="PackedScene" uid="uid://bd3ioms7sy1pn" path="res://scenes/ScreenScene.tscn" id="4_xrp6l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7dncm"]
+radius = 47.0
+
+[node name="PosteScene" type="Node2D"]
+script = ExtResource("1_yo8s1")
+
+[node name="BureauEmpilable" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_7dncm")
+
+[node name="ComputerScene" parent="." instance=ExtResource("3_0mxku")]
+position = Vector2(16, -20)
+
+[node name="ScreenScene" parent="." instance=ExtResource("4_xrp6l")]
+position = Vector2(-9, -22)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_7dncm")
