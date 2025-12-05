@@ -1,0 +1,1 @@
+Saluuut bien pour tous ceux qui viennent pour juger notre travail ceci est un clone du repo qu'on a sur le Gitlab de la fac (qui est privé...) ceci est une copie et je remercie mon ami E-Shirocku pour le travail :D
